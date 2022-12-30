@@ -1,0 +1,8 @@
+services:
+  social_deck.social_media_posts:
+    class: Drupal\social_deck\Service\SocialMediaPosts
+    arguments: ['@entity_type.manager']
+
+  social_deck.post_to_social_media:
+    class: Drupal\social_deck\Service\PostToSocialMedia
+    arguments: [ '@social_deck.social_media_posts' ]

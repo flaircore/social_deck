@@ -1,0 +1,24 @@
+uuid: e9a47ee9-42b2-40c5-9c0f-765b73527e35
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.social
+_core:
+  default_config_hash: aULcPijO_f9ECdo_j8AssuR8H3W09RKnKwUitXyJYXM
+id: node.social.status
+field_name: status
+entity_type: node
+bundle: social
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

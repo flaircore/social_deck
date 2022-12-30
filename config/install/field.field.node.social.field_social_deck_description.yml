@@ -1,0 +1,23 @@
+uuid: c23c28ac-0bde-48c6-bf13-691d50fc108b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_deck_description
+    - node.type.social
+  module:
+    - text
+_core:
+  default_config_hash: Cvi7aAAI0xgtYAMD6BdznHDD1uYAfMFpBovauh5uHOA
+id: node.social.field_social_deck_description
+field_name: field_social_deck_description
+entity_type: node
+bundle: social
+label: Description
+description: 'The Description text to associate with this social media post'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

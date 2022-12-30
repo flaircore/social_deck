@@ -1,0 +1,20 @@
+uuid: 747e4ecd-cdf0-427e-a039-57ac4fd0951e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: nLBLvFyBNFsmuuqGosjyRuVq5sarx58wV6i4P3TX9C0
+name: Social
+type: social
+description: 'Content to post to social using the Social Deck module'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

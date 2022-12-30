@@ -1,0 +1,5 @@
+name: Social Deck
+type: module
+description: Manage social posts related to your brands
+package: Social Media
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,36 @@
+uuid: 0988644e-05d4-4b4f-a6cc-6850a5041a23
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.social.field_social_deck_date
+    - field.field.node.social.field_social_deck_description
+    - field.field.node.social.field_social_deck_link
+    - field.field.node.social.field_social_deck_media
+    - field.field.node.social.field_social_media_post_info
+    - field.field.node.social.field_social_post_is_posted
+    - node.type.social
+  module:
+    - user
+_core:
+  default_config_hash: snxYVRSCAu25g1HL8e8QWc5rzV9EiUM4OsBKDPKIx9s
+id: node.social.teaser
+targetEntityType: node
+bundle: social
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_social_deck_date: true
+  field_social_deck_description: true
+  field_social_deck_link: true
+  field_social_deck_media: true
+  field_social_media_post_info: true
+  field_social_post_is_posted: true
+  langcode: true
+  search_api_excerpt: true

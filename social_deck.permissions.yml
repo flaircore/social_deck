@@ -1,0 +1,4 @@
+administer social_deck configuration:
+  title: 'Administer social_deck configuration'
+  description: 'Optional description.'
+  restrict access: true

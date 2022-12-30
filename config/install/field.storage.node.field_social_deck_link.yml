@@ -1,0 +1,21 @@
+uuid: c4cfcaf3-f2da-42dd-a848-01883d7a0e7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: '-TgQDaMqhh6iKscvFQdE79Jcnt9OM9UiTTJv0rYLEwM'
+id: node.field_social_deck_link
+field_name: field_social_deck_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

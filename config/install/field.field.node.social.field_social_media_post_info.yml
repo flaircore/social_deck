@@ -1,0 +1,21 @@
+uuid: af8534d1-4f78-4ec7-83bd-1ff68cd918f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_media_post_info
+    - node.type.social
+  module:
+    - text
+id: node.social.field_social_media_post_info
+field_name: field_social_media_post_info
+entity_type: node
+bundle: social
+label: 'Social media post info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

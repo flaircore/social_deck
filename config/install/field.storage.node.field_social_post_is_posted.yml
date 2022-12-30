@@ -1,0 +1,18 @@
+uuid: 5e7d4202-2ecb-4b0a-810a-a2538a1a7a57
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_social_post_is_posted
+field_name: field_social_post_is_posted
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

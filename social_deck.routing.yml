@@ -1,0 +1,7 @@
+social_deck.settings_form:
+  path: '/admin/config/system/social-deck'
+  defaults:
+    _title: 'Social Deck settings'
+    _form: 'Drupal\social_deck\Form\SettingsForm'
+  requirements:
+    _permission: 'administer social_deck configuration'

@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Social Deck module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_cron().
+ */
+function social_deck_cron() {
+
+  /** @var \Drupal\social_deck\Service\PostToSocialMedia $social_media */
+  $social_media = \Drupal::service('social_deck.post_to_social_media');
+  $social_media->postToSocials();
+}

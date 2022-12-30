@@ -1,0 +1,16 @@
+{
+  "name": "drupal/social_deck",
+  "type": "drupal-module",
+  "description": "Manage social posts related to your brands",
+  "keywords": ["Drupal", "Social media", "Facebook", "Instagram", "Linkein", "Reddit", "Twitter", "Tiktok"],
+  "homepage": "https://www.drupal.org/project/social_deck",
+  "minimum-stability": "dev",
+  "support": {
+     "issues": "https://www.drupal.org/project/issues/social_deck",
+     "source": "http://cgit.drupalcode.org/social_deck"
+  },
+  "require": {
+      "abraham/twitteroauth": "^4.0",
+      "facebook/graph-sdk": "^5.1"
+  }
+}

@@ -1,0 +1,22 @@
+uuid: 69180e01-96dd-4736-8852-97c576c252aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: HhQKkTHfjijOHslvM_wos2jn0ogKs2nYsOBFQwKshWU
+id: node.field_social_deck_date
+field_name: field_social_deck_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

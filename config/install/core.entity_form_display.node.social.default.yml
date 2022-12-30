@@ -1,0 +1,73 @@
+uuid: 976a45f8-c28f-4d6e-8c74-5d6e0063de8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.social.field_social_deck_date
+    - field.field.node.social.field_social_deck_description
+    - field.field.node.social.field_social_deck_link
+    - field.field.node.social.field_social_deck_media
+    - field.field.node.social.field_social_media_post_info
+    - field.field.node.social.field_social_post_is_posted
+    - node.type.social
+  module:
+    - datetime
+    - link
+    - media_library
+    - text
+_core:
+  default_config_hash: Io2zsUnm1l_6vm8wXI-ngUTyEwtjgYiQNXnLK1fI9Xk
+id: node.social.default
+targetEntityType: node
+bundle: social
+mode: default
+content:
+  field_social_deck_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_social_deck_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_social_deck_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_social_deck_media:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_social_media_post_info: true
+  field_social_post_is_posted: true
+  langcode: true
+  path: true
+  promote: true
+  simple_sitemap: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

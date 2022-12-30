@@ -1,0 +1,21 @@
+uuid: 9bc93bef-dffc-4a55-92a9-17500a8b70e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: 6FDsiQjzMhSho7WD7oZnqOU3ffwKEa3H_S_4RhcI6HQ
+id: node.field_social_deck_description
+field_name: field_social_deck_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
