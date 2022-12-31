@@ -157,13 +157,6 @@ class SettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $consumer_key = $form_state->getValue('twitter')['consumer_key'];
     $consumer_secret = $form_state->getValue('twitter')['consumer_secret'];
@@ -190,17 +183,21 @@ class SettingsForm extends ConfigFormBase {
    * Render twitter verification message.
    *
    * @param array $form
+   *   An associative array containing the structure of the form.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
    *
    * @return \Drupal\Core\Ajax\AjaxResponse
+   *   An Ajax response.
    */
   public function verifyTwitterSettings(array &$form, FormStateInterface $form_state) {
     $clients = new SocialDeckClients();
     /** @var \Drupal\social_deck\Helpers\Clients\TwitterClient $tweet */
     $tweet = $clients->getTwitterInstance();
-    $tweet = $tweet->verify_credentials();
+    $tweet = $tweet->verifyCredentials();
     if (isset($tweet['name'])) {
-      $content = $this->t('Settings verified: Name: @name, Screen Name: @screen_name', ['@name' => $tweet['name'], '@screen_name' => $tweet['screen_name']]);
+      $content = $this->t('Settings verified: Name: @name, Screen Name: @screen_name',
+        ['@name' => $tweet['name'], '@screen_name' => $tweet['screen_name']]);
     }
     else {
       $content = $this->t('Wrong Settings: @msg', ['@msg' => $tweet]);
@@ -218,14 +215,19 @@ class SettingsForm extends ConfigFormBase {
   }
 
   /**
-   * @param array $form
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   * Render Facebook verification message.
    *
-   * @return void
+   * @param array $form
+   *   An associative array containing the structure of the form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
+   *
+   * @return \Drupal\social_deck\Helpers\Clients\FacebookClient
+   *   Should be an Ajax response.
    */
   public function verifyFacebookSettings(array &$form, FormStateInterface $form_state) {
     $clients = new SocialDeckClients();
-    $facebook = $clients->getFacebookInstance();
+    return $clients->getFacebookInstance();
 
   }
 

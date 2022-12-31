@@ -5,41 +5,46 @@ namespace Drupal\social_deck\Helpers\Clients;
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 /**
- *
+ * Twitter client wrapper class in relation to configs.
  */
 class TwitterClient {
 
   /**
-   * @var \Abraham\TwitterOAuth\TwitterOAuth*/
+   * Twitter SDK instance in relation to configs.
+   *
+   * @var \Abraham\TwitterOAuth\TwitterOAuth
+   */
 
-  private $twitter_api;
+  private $twitterApi;
 
   /**
-   *
+   * Class constructor.
    */
   public function __construct($settings) {
 
     // API Key.
-    $CONSUMER_KEY = $settings['CONSUMER_KEY'];
+    $consumer_key = $settings['consumer_key'];
 
     // API Key Secret.
-    $CONSUMER_SECRET = $settings['CONSUMER_SECRET'];
-    ;
+    $consumer_secret = $settings['consumer_secret'];
 
     // Access Token.
-    $OAUTH_TOKEN = $settings['OAUTH_TOKEN'];
+    $oauth_token = $settings['oauth_token'];
 
     // Access Token Secret.
-    $OAUTH_TOKEN_SECRET = $settings['OAUTH_TOKEN_SECRET'];
-    $twitter_api = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $OAUTH_TOKEN, $OAUTH_TOKEN_SECRET);
-    $this->twitter_api = $twitter_api;
+    $oauth_token_secret = $settings['oauth_token_secret'];
+    $twitter_api = new TwitterOAuth($consumer_key, $consumer_secret, $oauth_token, $oauth_token_secret);
+    $this->twitterApi = $twitter_api;
   }
 
   /**
- *
- */
-  final public function verify_credentials() {
-    $content = $this->twitter_api->get("account/verify_credentials");
+   * Verifies the Twitter account.
+   *
+   * @return array
+   *   Twitter account name and screen name.
+   */
+  final public function verifyCredentials() {
+    $content = $this->twitterApi->get("account/verify_credentials");
 
     if ($content->errors) {
       return $content->errors[0]->message;
@@ -52,9 +57,15 @@ class TwitterClient {
   }
 
   /**
- *
- */
-  final public function post($content) {
+   * Posts content to Twitter.
+   *
+   * @param array $content
+   *   The content to post to twitter.
+   *
+   * @return false|mixed
+   *   The Tweet id, or false if failed to post.
+   */
+  final public function post(array $content) {
 
     $media_ids = [];
     $params = [
@@ -62,7 +73,7 @@ class TwitterClient {
     ];
     if (isset($content['media'])) {
       foreach ($content['media'] as $path) {
-        $media_res = $this->twitter_api->upload('media/upload', ['media' => $path]);
+        $media_res = $this->twitterApi->upload('media/upload', ['media' => $path]);
         $media_ids[] = $media_res->media_id_string;
       }
 
@@ -70,9 +81,9 @@ class TwitterClient {
       $params["media_ids"] = $media_ids;
     }
 
-    $this->twitter_api->setTimeouts(60, 10);
+    $this->twitterApi->setTimeouts(60, 10);
 
-    $statues = $this->twitter_api->post("statuses/update", $params);
+    $statues = $this->twitterApi->post("statuses/update", $params);
 
     // Reply with content link.
     if (isset($content['link'])) {
@@ -82,10 +93,10 @@ class TwitterClient {
         'auto_populate_reply_metadata' => TRUE,
       ];
 
-      $this->twitter_api->post("statuses/update", $reply_params);
+      $this->twitterApi->post("statuses/update", $reply_params);
     }
 
-    if ($this->twitter_api->getLastHttpCode() == 200) {
+    if ($this->twitterApi->getLastHttpCode() == 200) {
       // Tweet posted successfully
       // Post link as comment.
       return $statues->id;

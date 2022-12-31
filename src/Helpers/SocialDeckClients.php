@@ -6,20 +6,33 @@ use Drupal\social_deck\Helpers\Clients\TwitterClient;
 use Drupal\social_deck\Helpers\Clients\FacebookClient;
 
 /**
- *
+ * Social deck clients service class.
  */
 class SocialDeckClients {
 
   /**
-   * @var array*/
+   * An array to hold config settings.
+   *
+   * @var array
+   */
   protected $settings;
 
+  /**
+   * Twitter client instance.
+   *
+   * @var \Drupal\social_deck\Helpers\Clients\TwitterClient
+   */
   protected $twitter;
 
+  /**
+   * Facebook client instance.
+   *
+   * @var \Drupal\social_deck\Helpers\Clients\FacebookClient
+   */
   protected $facebook;
 
   /**
-   *
+   * Class constructor.
    */
   public function __construct() {
 
@@ -32,7 +45,7 @@ class SocialDeckClients {
   }
 
   /**
-   *
+   * Class constructor setup method.
    */
   protected function setup() {
     /** @var  \Drupal\Core\Config\ConfigFactoryInterface $config */
@@ -44,10 +57,10 @@ class SocialDeckClients {
 
     if ($consumer_key) {
       $twitter = [
-        'CONSUMER_KEY' => $consumer_key,
-        'CONSUMER_SECRET' => $consumer_secret,
-        'OAUTH_TOKEN' => $oauth_token,
-        'OAUTH_TOKEN_SECRET' => $oauth_token_secret,
+        'consumer_key' => $consumer_key,
+        'consumer_secret' => $consumer_secret,
+        'oauth_token' => $oauth_token,
+        'oauth_token_secret' => $oauth_token_secret,
       ];
       $this->settings['twitter'] = $twitter;
 
@@ -62,10 +75,10 @@ class SocialDeckClients {
 
     if ($fb_access_token) {
       $facebook = [
-        'ACCESS_TOKEN' => $fb_access_token,
-        'APP_SECRET' => $fb_app_secret,
-        'APP_ID' => $fb_app_id,
-        'PAGE_POST_ID' => $fb_page_id,
+        'access_token' => $fb_access_token,
+        'app_secret' => $fb_app_secret,
+        'app_id' => $fb_app_id,
+        'page_post_id' => $fb_page_id,
       ];
 
       $this->settings['facebook'] = $facebook;
@@ -76,7 +89,10 @@ class SocialDeckClients {
   }
 
   /**
+   * The Facebook client instance.
+   *
    * @return \Drupal\social_deck\Helpers\Clients\FacebookClient
+   *   Facebook client instance.
    */
   public function getFacebookInstance() {
     return $this->facebook;
@@ -84,7 +100,10 @@ class SocialDeckClients {
   }
 
   /**
+   * The Twitter client instance.
+   *
    * @return \Drupal\social_deck\Helpers\Clients\TwitterClient
+   *   Twitter client instance.
    */
   public function getTwitterInstance() {
     return $this->twitter;
