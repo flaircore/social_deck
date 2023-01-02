@@ -8,7 +8,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: Cvi7aAAI0xgtYAMD6BdznHDD1uYAfMFpBovauh5uHOA
+  default_config_hash: hEWgwhTmFY9rECHErPh0m3xtmICf7xQ_oadfiVFW4D0
 id: node.social.field_social_deck_description
 field_name: field_social_deck_description
 entity_type: node

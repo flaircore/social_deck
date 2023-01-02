@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: WpqP7-yfhb5X7ZzAMS-W8K22obxC3JQ3UQo_lnCxWnw
+  default_config_hash: X9bHhsPk0xFCWIWZXx_Eqslh4zqK3aVeL5URneQWhWU
 id: node.social.field_social_deck_link
 field_name: field_social_deck_link
 entity_type: node

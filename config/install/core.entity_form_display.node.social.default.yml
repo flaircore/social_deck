@@ -16,7 +16,7 @@ dependencies:
     - media_library
     - text
 _core:
-  default_config_hash: Io2zsUnm1l_6vm8wXI-ngUTyEwtjgYiQNXnLK1fI9Xk
+  default_config_hash: 0B665mQ18hHtZFmCTpamcDrsfmxG2sXtaXxigrfH3f4
 id: node.social.default
 targetEntityType: node
 bundle: social

@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.social
 _core:
-  default_config_hash: V2acKJ5LDEPQcJ2vWJaP3E6BKHtK-5-QlnYUsgOjIbk
+  default_config_hash: HHTrB5CA7ery7DnpJ5Hoa_Ig-pw6H0Y-Cy_iEKrYwbQ
 id: node.social.promote
 field_name: promote
 entity_type: node

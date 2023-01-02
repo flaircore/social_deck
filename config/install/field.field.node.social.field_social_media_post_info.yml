@@ -7,6 +7,8 @@ dependencies:
     - node.type.social
   module:
     - text
+_core:
+  default_config_hash: 0egZ8I3MjAew-Ea-Eq0jVr5Z4vLLCvcWR_U_SGpPeuk
 id: node.social.field_social_media_post_info
 field_name: field_social_media_post_info
 entity_type: node

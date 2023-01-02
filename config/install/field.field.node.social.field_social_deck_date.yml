@@ -8,7 +8,7 @@ dependencies:
   module:
     - datetime
 _core:
-  default_config_hash: LqfzjHhZiMSgU4yeCOchJLfbAAv9B0VsCkIHNjto59Y
+  default_config_hash: fUjsCcuvzO-yx2arfgY1Zrx6mw_tD8d6p6kToHKjT7c
 id: node.social.field_social_deck_date
 field_name: field_social_deck_date
 entity_type: node

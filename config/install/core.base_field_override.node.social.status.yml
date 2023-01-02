@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.social
 _core:
-  default_config_hash: aULcPijO_f9ECdo_j8AssuR8H3W09RKnKwUitXyJYXM
+  default_config_hash: fanhBtwoAFMQgkn-pmlbmQsYVWQKBeJ5sz87YnxqZuk
 id: node.social.status
 field_name: status
 entity_type: node

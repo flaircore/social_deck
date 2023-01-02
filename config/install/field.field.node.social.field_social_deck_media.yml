@@ -7,7 +7,7 @@ dependencies:
     - media.type.image
     - node.type.social
 _core:
-  default_config_hash: _FTbINKE21YSkPCN0TaIFj4S8T8Ry8fgTToKXtJrEnU
+  default_config_hash: 5WMbtxOHLtDfH15XkuSDO4s9B13ZAVHuwfMzWXF1Xm0
 id: node.social.field_social_deck_media
 field_name: field_social_deck_media
 entity_type: node

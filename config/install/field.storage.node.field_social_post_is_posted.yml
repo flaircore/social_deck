@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: HzWgn-eublI_KZFOdvfsOnpKNciX0NaPa03yGQYI_FI
 id: node.field_social_post_is_posted
 field_name: field_social_post_is_posted
 entity_type: node

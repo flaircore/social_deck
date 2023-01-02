@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: nLBLvFyBNFsmuuqGosjyRuVq5sarx58wV6i4P3TX9C0
+  default_config_hash: '-5i-9lxYDpqrbvbdW29NDaIFehFTFJZebp2iMdzLqx0'
 name: Social
 type: social
 description: 'Content to post to social using the Social Deck module'

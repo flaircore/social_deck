@@ -16,7 +16,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: ayPJT3QzOgiCk8dSgqUBzOGzT-2ZaIUKMmi8HRJ_c8I
+  default_config_hash: djw7P9It7ii3KnSrs1RPWqEQooP-oVMDfBxph-0qL_c
 id: node.social.default
 targetEntityType: node
 bundle: social

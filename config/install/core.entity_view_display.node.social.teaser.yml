@@ -14,7 +14,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: snxYVRSCAu25g1HL8e8QWc5rzV9EiUM4OsBKDPKIx9s
+  default_config_hash: 1FfvUQGrBS_2juQfeOTxaFLeplZprZ4RNXK9VCkGj9c
 id: node.social.teaser
 targetEntityType: node
 bundle: social

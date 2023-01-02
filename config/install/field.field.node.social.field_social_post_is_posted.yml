@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_social_post_is_posted
     - node.type.social
+_core:
+  default_config_hash: vbECoIz2VUJYFL0sQSemc-PpjSEtWhxuyfeodVCWHVs
 id: node.social.field_social_post_is_posted
 field_name: field_social_post_is_posted
 entity_type: node

@@ -6,7 +6,7 @@ dependencies:
     - link
     - node
 _core:
-  default_config_hash: '-TgQDaMqhh6iKscvFQdE79Jcnt9OM9UiTTJv0rYLEwM'
+  default_config_hash: VFOqNa3b5ZTcwRjxYi2MALAyVu5kFHRKDmHN6aaodf4
 id: node.field_social_deck_link
 field_name: field_social_deck_link
 entity_type: node

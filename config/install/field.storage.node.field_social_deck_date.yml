@@ -6,7 +6,7 @@ dependencies:
     - datetime
     - node
 _core:
-  default_config_hash: HhQKkTHfjijOHslvM_wos2jn0ogKs2nYsOBFQwKshWU
+  default_config_hash: T_NcI6dn2hbEHaxXqFrcorTZAmI8hgHud7p1hCJitqo
 id: node.field_social_deck_date
 field_name: field_social_deck_date
 entity_type: node
