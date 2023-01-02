@@ -6,5 +6,6 @@ core_version_requirement: ^9 || ^10
 
 dependencies:
   - drupal:media
+  - drupal:media_library
 
 configure: social_deck.settings_form
